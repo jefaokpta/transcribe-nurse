@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Trancrever Audio</title>
+</head>
+<body>
+    <h1>Transcrever Audio</h1>
+
+    <p id="number"></p>
+    <div id="display"></div>
+    <div id="controllers"></div>
+
+    <script>
+        fetch('/api/transcription/number')
+            .then(response => response.text())
+            .then(number => {
+                document.getElementById('number').innerText = number;
+            })
+    </script>
+    <script src="js/recorder.js"></script>
+</body>
+</html>
