@@ -11,6 +11,8 @@
     <div id="display"></div>
     <div id="controllers"></div>
 
+    <audio id="audio" controls src="audios/audio.ogg"></audio>
+
     <script>
         fetch('/api/transcription/number')
             .then(response => response.text())
